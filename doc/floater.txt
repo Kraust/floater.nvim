@@ -1,0 +1,41 @@
+==============================================================================
+
+*floater.nvim* Floating Terminal Tasker
+Author: Kraust <http://github.com/kraust>
+Repo:   http://github.com/kraust/floater.nvim
+
+==============================================================================
+
+CONTENTS                                                    *floater-contents*
+
+Introduction                                            |floater-introduction|
+Commands                                                    |floater-commands|
+Functions                                                  |floater-functions|
+
+==============================================================================
+INTRODUCTION                                            |floater-introduction|
+
+*floater.nvim* is a Neovim plugin is an implementation of the nvim_open_win()
+function. The main goal was to allow the user to spawn off a floating terminal
+with a single command. As a side effect of this, floater.nvim can also be
+used as an async task runner.
+
+==============================================================================
+COMMANDS                                                    |floater-commands|
+
+*:FloaterOpen*
+
+    FloaterOpen allows the user to open a floating shell window. This floating
+    Window is no different than a *terminal* buffer, and can be manipulated
+    like any other terminal buffer. When you are done using the Floating
+    Terminal you can exit it with :quit or by exiting the terminal session.
+
+==============================================================================
+FUNCTIONS                                                  |floater-functions|
+
+floater#Exec({command}, {close_on_open})                      *floater#Exec()*
+
+    Create a floating buffer and exec {command}. If {close_on_open} is set
+    to v:true - closes the buffer after the command is run which is useful 
+    when launching gui applications.
+
