@@ -4,6 +4,11 @@ This was a "Hello world" Vim plugin for me and I decided to use neovim's new-ish
 
 ![screenshot](https://raw.githubusercontent.com/Kraust/floater.nvim/master/images/screenshot.png)
 
+You can use the following leader binding to toggle with `FloaterToggle`:
+```
+    nnoremap <leader>f :FloaterToggle<cr>
+```
+
 # TODO
 - Adjustable window sizes (currently only takes up half of the screen)
 - Floating window positioning

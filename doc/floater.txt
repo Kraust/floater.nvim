@@ -30,6 +30,17 @@ COMMANDS                                                    |floater-commands|
     like any other terminal buffer. When you are done using the Floating
     Terminal you can exit it with :quit or by exiting the terminal session.
 
+*:FloaterToggle*
+    FloaterToggle will toggle a floating terminal window. It can be closed by
+    calling FloaterToggle again. The terminal session can be closed by
+    executing :bdelete or exiting your terminal normally.
+
+    You can map this like any other command. For example. to use <leader>f
+    to toggle the floating terminal:
+
+        nnoremap <leader>f :FloaterToggle<cr>
+
+
 ==============================================================================
 FUNCTIONS                                                  |floater-functions|
 
@@ -38,4 +49,9 @@ floater#Exec({command}, {close_on_open})                      *floater#Exec()*
     Create a floating buffer and exec {command}. If {close_on_open} is set
     to v:true - closes the buffer after the command is run which is useful 
     when launching gui applications.
+
+floater#Toggle()                                            *floater#Toggle()*
+    Toggle a floating terminal buffer. This buffer will use g:floater_buf as
+    a global context and can be closed by executing :bdelete.
+
 
